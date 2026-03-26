@@ -117,6 +117,20 @@ claude
 - [Skills Reference](.claude/docs/skills-reference.md)
 - [Rules Reference](.claude/docs/rules-reference.md)
 
+## 跨 CLI 兼容现状
+
+当前实测结论：
+- Claude Code：原生 slash 工作流体验最完整。
+- Kimi CLI：可加载技能，但 `/command` 直调用还未完全等价。
+- OpenCode：可执行工作流意图，但 rules/hooks 还未做到完全一致。
+
+迁移 issue：
+- [#1 跨 CLI slash 命令兼容层](https://github.com/stephenlzc/ResearchRocket/issues/1)
+- [#2 跨 CLI 规则/门禁一致性](https://github.com/stephenlzc/ResearchRocket/issues/2)
+
+欢迎 PR：
+- 欢迎提交命令适配器、门禁执行器、一致性测试与迁移文档。
+
 ## 方法论启发
 
 - [stop-slop](https://github.com/hardikpandya/stop-slop)：借鉴其写作质量治理思想，已改造成学术场景的 warn-only 检查。

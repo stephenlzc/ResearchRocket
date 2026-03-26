@@ -108,6 +108,20 @@ claude
 - [Skills Reference](.claude/docs/skills-reference.md)
 - [Rules Reference](.claude/docs/rules-reference.md)
 
+## สถานะความเข้ากันได้ข้าม CLI
+
+ผลทดสอบล่าสุดในเครื่อง:
+- Claude Code: รองรับคำสั่งแบบ slash ได้ครบที่สุด และเป็น baseline ของโปรเจกต์
+- Kimi CLI: โหลด skills ได้ แต่การเรียก `/command` โดยตรงยังไม่เทียบเท่าเต็มรูปแบบ
+- OpenCode: รันเจตนาของเวิร์กโฟลว์ได้ แต่ความเท่าเทียมของ rules/hooks ยังต้องมีชั้น adapter เพิ่ม
+
+Migration issues:
+- [#1 ชั้นความเข้ากันได้ของคำสั่ง slash ระหว่าง CLI](https://github.com/stephenlzc/ResearchRocket/issues/1)
+- [#2 ความเท่าเทียมของ guardrails (rules/hooks) และ submission gates ระหว่าง CLI](https://github.com/stephenlzc/ResearchRocket/issues/2)
+
+เปิดรับ PR:
+- ยินดีรับ PR สำหรับ command adapters, gate runners, parity tests และเอกสาร migration
+
 ## แรงบันดาลใจเชิงวิธีวิทยา
 
 - [stop-slop](https://github.com/hardikpandya/stop-slop): นำแนวคิดมากรับใช้กับงานวิชาการแบบเตือนเท่านั้น

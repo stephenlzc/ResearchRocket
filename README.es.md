@@ -108,6 +108,20 @@ Referencias:
 - [Skills Reference](.claude/docs/skills-reference.md)
 - [Rules Reference](.claude/docs/rules-reference.md)
 
+## Estado de compatibilidad entre CLIs
+
+Hallazgos actuales de validación local:
+- Claude Code: experiencia nativa con comandos slash; es la referencia principal.
+- Kimi CLI: puede cargar skills, pero la invocación directa con `/command` todavía no es equivalente.
+- OpenCode: el flujo general se puede ejecutar, pero la paridad de rules/hooks requiere una capa de adaptación.
+
+Issues de migración:
+- [#1 Capa de compatibilidad de comandos slash entre CLIs](https://github.com/stephenlzc/ResearchRocket/issues/1)
+- [#2 Paridad de guardrails (rules/hooks) y gates de envío entre CLIs](https://github.com/stephenlzc/ResearchRocket/issues/2)
+
+Llamado a PRs:
+- Se aceptan contribuciones para adaptadores de comandos, ejecutores de gates, pruebas de paridad y documentación de migración.
+
 ## Inspiraciones metodológicas
 
 - [stop-slop](https://github.com/hardikpandya/stop-slop): inspiración para higiene de estilo, adaptada a advertencias académicas.

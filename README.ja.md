@@ -108,6 +108,20 @@ claude
 - [Skills Reference](.claude/docs/skills-reference.md)
 - [Rules Reference](.claude/docs/rules-reference.md)
 
+## CLI 互換性の現状
+
+ローカル検証で確認した内容:
+- Claude Code: slash コマンドを含むネイティブ運用が最も安定。
+- Kimi CLI: スキル読み込みは可能だが、`/command` 直接実行の互換性は未完。
+- OpenCode: ワークフロー意図は実行できるが、rules/hooks の同等性は追加実装が必要。
+
+移行トラッキング Issue:
+- [#1 Cross-CLI slash command compatibility layer](https://github.com/stephenlzc/ResearchRocket/issues/1)
+- [#2 Cross-CLI guardrail parity for hooks/rules and submission gates](https://github.com/stephenlzc/ResearchRocket/issues/2)
+
+PR 募集:
+- コマンドアダプタ、ゲート実行基盤、互換性テスト、移行ドキュメントの貢献を歓迎します。
+
 ## 方法論の参照元
 
 - [stop-slop](https://github.com/hardikpandya/stop-slop): 学術向け warn-only スタイルチェックとして再解釈。

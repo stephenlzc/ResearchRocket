@@ -114,6 +114,20 @@ Reference docs:
 - [Skills Reference](.claude/docs/skills-reference.md)
 - [Rules Reference](.claude/docs/rules-reference.md)
 
+## Cross-CLI Compatibility Status
+
+Current observations from local validation:
+- Claude Code: native slash-style workflow is the baseline.
+- Kimi CLI: skills can be loaded and used, but direct `/command` invocation is not yet parity-equivalent.
+- OpenCode: workflow intent is executable, but rules/hooks parity is not guaranteed without adapter support.
+
+Tracked migration issues:
+- [#1 Cross-CLI slash command compatibility layer](https://github.com/stephenlzc/ResearchRocket/issues/1)
+- [#2 Cross-CLI guardrail parity for hooks/rules and submission gates](https://github.com/stephenlzc/ResearchRocket/issues/2)
+
+Call for PRs:
+- Contributions are welcome for command adapters, guardrail runners, parity tests, and migration docs.
+
 ## Methodology Inspirations
 
 - [stop-slop](https://github.com/hardikpandya/stop-slop): style-governance inspiration, rewritten for academic warn-only checks.

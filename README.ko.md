@@ -108,6 +108,20 @@ claude
 - [Skills Reference](.claude/docs/skills-reference.md)
 - [Rules Reference](.claude/docs/rules-reference.md)
 
+## CLI 호환성 현황
+
+현재 확인된 상태:
+- Claude Code: slash 기반 워크플로가 가장 완전하게 동작.
+- Kimi CLI: 스킬 로드는 가능하지만 `/command` 직접 호출은 완전 동등하지 않음.
+- OpenCode: 워크플로 의도 실행은 가능하지만 rules/hooks 동등성은 추가 작업 필요.
+
+마이그레이션 이슈:
+- [#1 Cross-CLI slash command compatibility layer](https://github.com/stephenlzc/ResearchRocket/issues/1)
+- [#2 Cross-CLI guardrail parity](https://github.com/stephenlzc/ResearchRocket/issues/2)
+
+PR 환영:
+- 명령 어댑터, 게이트 실행기, 패리티 테스트, 마이그레이션 문서 기여를 환영합니다.
+
 ## 방법론 영감
 
 - [stop-slop](https://github.com/hardikpandya/stop-slop): 학술 문체 경고형 검사로 재해석.

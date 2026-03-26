@@ -108,6 +108,20 @@ Références:
 - [Skills Reference](.claude/docs/skills-reference.md)
 - [Rules Reference](.claude/docs/rules-reference.md)
 
+## Compatibilité multi-CLI
+
+État actuel:
+- Claude Code: expérience slash native la plus complète.
+- Kimi CLI: les skills se chargent, mais les commandes `/...` ne sont pas encore totalement équivalentes.
+- OpenCode: le workflow s'exécute, mais la parité rules/hooks reste à consolider.
+
+Issues de migration:
+- [#1 Couche de compatibilité des commandes slash](https://github.com/stephenlzc/ResearchRocket/issues/1)
+- [#2 Parité des garde-fous hooks/rules](https://github.com/stephenlzc/ResearchRocket/issues/2)
+
+Appel à contributions:
+- PR bienvenues pour les adaptateurs de commandes, l'exécution des gates, les tests de parité et la documentation de migration.
+
 ## Inspirations méthodologiques
 
 - [stop-slop](https://github.com/hardikpandya/stop-slop): inspiration pour l'hygiène rédactionnelle, adapté en mode avertissement.
