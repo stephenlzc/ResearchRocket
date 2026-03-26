@@ -1,0 +1,16 @@
+project:
+  name: "research-studio-project"
+  mode: "full-auto"
+
+research:
+  topic: "replace with your topic"
+  graceful_degradation: true
+
+llm:
+  provider: "acp"
+  acp:
+    agent: "codex"
+    cwd: "."
+
+experiment:
+  mode: "sandbox"

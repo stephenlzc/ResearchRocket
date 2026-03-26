@@ -9,25 +9,17 @@
       "Bash(git status*)",
       "Bash(git diff*)",
       "Bash(git log*)",
-      "Bash(git branch*)",
-      "Bash(git rev-parse*)",
       "Bash(ls *)",
-      "Bash(dir *)",
-      "Bash(python -m json.tool*)",
-      "Bash(python -m pytest*)",
-      "Bash(py -m pytest*)"
+      "Bash(find *)",
+      "Bash(researchclaw *)",
+      "Bash(pytest*)",
+      "Bash(python -m pytest*)"
     ],
     "deny": [
-      "Bash(rm -rf *)",
+      "Bash(rm -rf /)",
       "Bash(git push --force*)",
-      "Bash(git push -f *)",
       "Bash(git reset --hard*)",
-      "Bash(git clean -f*)",
       "Bash(sudo *)",
-      "Bash(chmod 777*)",
-      "Bash(*>.env*)",
-      "Bash(cat *.env*)",
-      "Bash(type *.env*)",
       "Read(**/.env*)"
     ]
   },
@@ -40,11 +32,6 @@
             "type": "command",
             "command": "bash .claude/hooks/session-start.sh",
             "timeout": 10
-          },
-          {
-            "type": "command",
-            "command": "bash .claude/hooks/detect-gaps.sh",
-            "timeout": 10
           }
         ]
       }
@@ -55,12 +42,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/validate-commit.sh",
-            "timeout": 15
-          },
-          {
-            "type": "command",
-            "command": "bash .claude/hooks/validate-push.sh",
+            "command": "bash .claude/hooks/validate-research-artifacts.sh",
             "timeout": 10
           }
         ]
@@ -72,19 +54,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/validate-assets.sh",
-            "timeout": 10
-          }
-        ]
-      }
-    ],
-    "PreCompact": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash .claude/hooks/pre-compact.sh",
+            "command": "bash .claude/hooks/validate-citations.sh",
             "timeout": 10
           }
         ]
@@ -98,18 +68,6 @@
             "type": "command",
             "command": "bash .claude/hooks/session-stop.sh",
             "timeout": 10
-          }
-        ]
-      }
-    ],
-    "SubagentStart": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash .claude/hooks/log-agent.sh",
-            "timeout": 5
           }
         ]
       }

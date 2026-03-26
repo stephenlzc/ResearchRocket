@@ -1,26 +1,19 @@
-# Claude Code Game Studios -- Game Studio Agent Architecture
+# Research Studio -- Agent Architecture
 
-Indie game development managed through 48 coordinated Claude Code subagents.
-Each agent owns a specific domain, enforcing separation of concerns and quality.
+SCI research development managed through coordinated research subagents.
+Each agent owns a domain, enforcing quality gates and reproducibility.
 
 ## Technology Stack
 
-- **Engine**: [CHOOSE: Godot 4 / Unity / Unreal Engine 5]
-- **Language**: [CHOOSE: GDScript / C# / C++ / Blueprint]
-- **Version Control**: Git with trunk-based development
-- **Build System**: [SPECIFY after choosing engine]
-- **Asset Pipeline**: [SPECIFY after choosing engine]
-
-> **Note**: Engine-specialist agents exist for Godot, Unity, and Unreal with
-> dedicated sub-specialists. Use the set matching your engine.
+- **Research Engine**: AutoResearchClaw (CLI pipeline backend)
+- **Primary Language**: Python 3.11+
+- **Version Control**: Git
+- **Execution**: Local sandbox / Docker (per AutoResearchClaw config)
+- **Writing Output**: Markdown + LaTeX + BibTeX
 
 ## Project Structure
 
 @.claude/docs/directory-structure.md
-
-## Engine Version Reference
-
-@docs/engine-reference/godot/VERSION.md
 
 ## Technical Preferences
 
@@ -32,23 +25,9 @@ Each agent owns a specific domain, enforcing separation of concerns and quality.
 
 ## Collaboration Protocol
 
-**User-driven collaboration, not autonomous execution.**
-Every task follows: **Question -> Options -> Decision -> Draft -> Approval**
-
-- Agents MUST ask "May I write this to [filepath]?" before using Write/Edit tools
-- Agents MUST show drafts or summaries before requesting approval
-- Multi-file changes require explicit approval for the full changeset
-- No commits without user instruction
-
-See `docs/COLLABORATIVE-DESIGN-PRINCIPLE.md` for full protocol and examples.
-
-> **First session?** If the project has no engine configured and no game concept,
-> run `/start` to begin the guided onboarding flow.
+User-driven collaboration, not blind autonomous writing.
+Every major change follows: Question -> Options -> Decision -> Draft -> Approval.
 
 ## Coding Standards
 
 @.claude/docs/coding-standards.md
-
-## Context Management
-
-@.claude/docs/context-management.md

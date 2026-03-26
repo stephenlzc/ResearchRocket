@@ -1,48 +1,24 @@
 # Technical Preferences
 
-<!-- Populated by /setup-engine. Updated as the user makes decisions throughout development. -->
-<!-- All agents reference this file for project-specific standards and conventions. -->
+## Runtime
 
-## Engine & Language
+- Python: 3.11+
+- Research Backend: AutoResearchClaw CLI
+- Execution mode: sandbox-first, reproducible config required
 
-- **Engine**: [TO BE CONFIGURED — run /setup-engine]
-- **Language**: [TO BE CONFIGURED]
-- **Rendering**: [TO BE CONFIGURED]
-- **Physics**: [TO BE CONFIGURED]
+## Reproducibility Baseline
 
-## Naming Conventions
+- Every run must have config snapshot
+- Every key result must have script + input + output traceability
+- Random seeds must be explicit when applicable
 
-- **Classes**: [TO BE CONFIGURED]
-- **Variables**: [TO BE CONFIGURED]
-- **Signals/Events**: [TO BE CONFIGURED]
-- **Files**: [TO BE CONFIGURED]
-- **Scenes/Prefabs**: [TO BE CONFIGURED]
-- **Constants**: [TO BE CONFIGURED]
+## Citation Policy
 
-## Performance Budgets
+- Prefer verified citations from trusted sources
+- No placeholder/fake citations in final paper artifacts
 
-- **Target Framerate**: [TO BE CONFIGURED]
-- **Frame Budget**: [TO BE CONFIGURED]
-- **Draw Calls**: [TO BE CONFIGURED]
-- **Memory Ceiling**: [TO BE CONFIGURED]
+## Quality Targets
 
-## Testing
-
-- **Framework**: [TO BE CONFIGURED]
-- **Minimum Coverage**: [TO BE CONFIGURED]
-- **Required Tests**: Balance formulas, gameplay systems, networking (if applicable)
-
-## Forbidden Patterns
-
-<!-- Add patterns that should never appear in this project's codebase -->
-- [None configured yet — add as architectural decisions are made]
-
-## Allowed Libraries / Addons
-
-<!-- Add approved third-party dependencies here -->
-- [None configured yet — add as dependencies are approved]
-
-## Architecture Decisions Log
-
-<!-- Quick reference linking to full ADRs in docs/architecture/ -->
-- [No ADRs yet — use /architecture-decision to create one]
+- Experiment logs complete
+- Metrics reported with clear definitions
+- Claims mapped to evidence artifacts
