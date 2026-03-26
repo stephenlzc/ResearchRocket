@@ -25,3 +25,8 @@ Agents must:
 - No unverified experiment claims
 - Keep experiment logs and config snapshots
 - Mark assumptions clearly when evidence is missing
+
+## Method Inspiration Notes
+
+- `stop-slop` is used only as inspiration for warn-only writing hygiene checks in academic drafts.
+- `pomasa` is used only as pattern inspiration; this repository does not copy external template text.
