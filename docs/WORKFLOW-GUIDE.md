@@ -12,6 +12,12 @@
 - Run `/setup-researchclaw`
 - Input: AutoResearchClaw install path and execution environment
 - Ensure `researchclaw` is available with validated config
+- Standard minimal test command order:
+  - If `config.arc.yaml` is missing: `researchclaw init`
+  - Export or confirm the API key environment variable required by `llm.api_key_env`
+  - Run `researchclaw doctor`
+  - Run `researchclaw validate`
+  - Proceed to the next workflow step only after both checks pass
 - Output: reproducible runtime config snapshot
 
 ## Phase 3: Literature and Data
